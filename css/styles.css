@@ -415,8 +415,18 @@ nav h1 a {
   margin: 0 0 10px;
 }
 
+#restaurant-hours {
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+#restaurant-hours tr {
+  border-bottom: 1px dotted;
+}
+
 #restaurant-hours td {
   color: #666;
+  padding: 5px;
 }
 
 .restaurant-description {
@@ -445,6 +455,9 @@ nav h1 a {
   #restaurant-container,
   #reviews-container {
     width: 50%;
+  }
+  #restaurant-hours {
+    margin: 0;
   }
   .restaurant-details {
     display: flex;
