@@ -33,14 +33,14 @@ li {
 }
 
 a {
-  color: orange;
+  color: #d35400;
   text-decoration: none;
 }
 
 a:hover,
 a:focus {
-  color: #3397db;
-  text-decoration: underline;
+  color: #ffffff;
+  text-decoration: underline !important;
 }
 
 a img {
@@ -77,14 +77,22 @@ section {
   min-height: 100%;
 }
 
+.maincontent-margin {
+  margin-top: 130px;
+}
+
 #footer {
   background-color: #444;
-  color: #aaa;
+  color: #bfbfbf;
   font-size: .8rem;
   letter-spacing: 1px;
   padding: 25px;
   text-align: center;
   text-transform: uppercase;
+}
+
+#footer a {
+  color: #f5ab35;
 }
 
 /* ====================== Helper Classes ====================== */
@@ -102,6 +110,35 @@ section {
   clip: rect(1px 1px 1px 1px);
   /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
+}
+
+a.skip-main {
+  left: -9999px;
+  position: fixed;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -9999;
+}
+
+a.skip-main:focus,
+a.skip-main:active {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 30%;
+  height: auto;
+  overflow: auto;
+  padding: 5px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 1.2em;
+  z-index: 9999;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 /* ====================== Navigation ====================== */
@@ -150,7 +187,7 @@ nav h1 a {
 /* Add a color to all links inside the list */
 
 #breadcrumb li a {
-  color: #0275d8;
+  color: #0F4880;
   text-decoration: none;
 }
 
@@ -279,8 +316,8 @@ nav h1 a {
   min-width: 100%;
 }
 
-#restaurants-list li h1 {
-  color: #f18200;
+#restaurants-list li h2 {
+  color: #d35400;
   font-family: Arial, sans-serif;
   font-weight: 200;
   letter-spacing: 0;
@@ -298,15 +335,20 @@ nav h1 a {
 }
 
 #restaurants-list li a {
-  background-color: orange;
+  background-color: #f5ab35;
   border-bottom: 3px solid #eee;
-  color: #fff;
+  color: #444;
+  font-weight: 600;
   display: inline-block;
   margin: 15px 0 0;
   padding: 8px 30px 10px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+#restaurants-list li a:hover {
+  text-decoration: underline;
 }
 
 @media screen and (min-width: 630px) {
@@ -322,6 +364,7 @@ nav h1 a {
   top: 0;
   width: 100%;
   z-index: 1000;
+  height: 130px;
 }
 
 .inside #map-container {
@@ -341,7 +384,7 @@ nav h1 a {
 }
 
 #restaurant-name {
-  color: #f18200;
+  color: #d35400;
   font-family: Arial, sans-serif;
   font-weight: 200;
   letter-spacing: 0;
@@ -386,7 +429,7 @@ nav h1 a {
 }
 
 #reviews-container h1 {
-  color: #f58500;
+  color: #d35400;
   font-weight: 300;
   letter-spacing: -1px;
   padding-bottom: 1pt;
@@ -420,13 +463,21 @@ nav h1 a {
   margin: 20px 0;
 }
 
-#restaurant-hours tr {
+#restaurant-hours>tr>th {
+  padding: 15px 0 0;
+}
+
+#restaurant-hours>tr>td {
+  padding: 0 0 15px;
   border-bottom: 1px dotted;
 }
 
-#restaurant-hours td {
+#restaurant-hours td,
+#restaurant-hours th {
   color: #666;
   padding: 5px;
+  display: block;
+  text-align: center;
 }
 
 .restaurant-description {
@@ -462,7 +513,7 @@ nav h1 a {
   .restaurant-details {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
     max-width: unset;
     padding: 0 50px 20px;
     margin: 0 auto;

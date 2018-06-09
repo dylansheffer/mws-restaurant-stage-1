@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -11,6 +11,7 @@
 </head>
 
 <body class="inside">
+  <a class="skip-main inside" href="#maincontent">Skip to main content</a>
   <!-- Beginning header -->
   <header>
     <!-- Beginning nav -->
@@ -31,7 +32,7 @@
   <!-- End header -->
 
   <!-- Beginning main -->
-  <main id="maincontent">
+  <main id="maincontent" class="maincontent-margin">
     <!-- Beginning map -->
     <section id="map-container">
       <div id="map"></div>
@@ -45,8 +46,10 @@
         <p id="restaurant-cuisine"></p>
       </div>
       <div class="restaurant-details">
-        <p id="restaurant-address"></p>
-        <table id="restaurant-hours"></table>
+        <address id="restaurant-address"></address>
+        <table id="restaurant-hours">
+          <caption class="visually-hidden">Restaurant Hours</caption>
+        </table>
       </div>
     </section>
     <!-- end restaurant -->
