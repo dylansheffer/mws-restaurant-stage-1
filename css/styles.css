@@ -33,13 +33,13 @@ li {
 }
 
 a {
-  color: orange;
+  color: #d35400;
   text-decoration: none;
 }
 
 a:hover,
 a:focus {
-  color: #3397db;
+  color: #ffffff;
   text-decoration: underline;
 }
 
@@ -77,14 +77,22 @@ section {
   min-height: 100%;
 }
 
+.maincontent-margin {
+  margin-top: 130px;
+}
+
 #footer {
   background-color: #444;
-  color: #aaa;
+  color: #bfbfbf;
   font-size: .8rem;
   letter-spacing: 1px;
   padding: 25px;
   text-align: center;
   text-transform: uppercase;
+}
+
+#footer a {
+  color: #f5ab35;
 }
 
 /* ====================== Helper Classes ====================== */
@@ -150,7 +158,7 @@ nav h1 a {
 /* Add a color to all links inside the list */
 
 #breadcrumb li a {
-  color: #0275d8;
+  color: #0F4880;
   text-decoration: none;
 }
 
@@ -280,7 +288,7 @@ nav h1 a {
 }
 
 #restaurants-list li h1 {
-  color: #f18200;
+  color: #d35400;
   font-family: Arial, sans-serif;
   font-weight: 200;
   letter-spacing: 0;
@@ -298,15 +306,20 @@ nav h1 a {
 }
 
 #restaurants-list li a {
-  background-color: orange;
+  background-color: #f5ab35;
   border-bottom: 3px solid #eee;
-  color: #fff;
+  color: #444;
+  font-weight: 600;
   display: inline-block;
   margin: 15px 0 0;
   padding: 8px 30px 10px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+#restaurants-list li a:hover {
+  text-decoration: underline;
 }
 
 @media screen and (min-width: 630px) {
@@ -322,6 +335,7 @@ nav h1 a {
   top: 0;
   width: 100%;
   z-index: 1000;
+  height: 130px;
 }
 
 .inside #map-container {
@@ -341,7 +355,7 @@ nav h1 a {
 }
 
 #restaurant-name {
-  color: #f18200;
+  color: #d35400;
   font-family: Arial, sans-serif;
   font-weight: 200;
   letter-spacing: 0;
@@ -386,7 +400,7 @@ nav h1 a {
 }
 
 #reviews-container h1 {
-  color: #f58500;
+  color: #d35400;
   font-weight: 300;
   letter-spacing: -1px;
   padding-bottom: 1pt;
