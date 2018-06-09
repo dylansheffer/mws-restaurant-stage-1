@@ -148,7 +148,7 @@ createRestaurantHTML = (restaurant) => {
   infoContainer.className = 'restaurant-info-container';
   li.append(infoContainer);
 
-  const name = document.createElement('h1');
+  const name = document.createElement('h2');
   name.innerHTML = restaurant.name;
   infoContainer.append(name);
 
@@ -157,16 +157,17 @@ createRestaurantHTML = (restaurant) => {
   infoContainer.append(detailContainer);
 
   const neighborhood = document.createElement('p');
-  neighborhood.innerHTML = restaurant.neighborhood;
+  neighborhood.innerHTML = '<em class="underline">' + restaurant.neighborhood + '</em>';
   detailContainer.append(neighborhood);
 
-  const address = document.createElement('p');
+  const address = document.createElement('address');
   address.innerHTML = restaurant.address;
   detailContainer.append(address);
 
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
+  more.setAttribute('aria-label', 'view details about ' + restaurant.name)
   infoContainer.append(more)
 
   return li

@@ -40,7 +40,7 @@ a {
 a:hover,
 a:focus {
   color: #ffffff;
-  text-decoration: underline;
+  text-decoration: underline !important;
 }
 
 a img {
@@ -135,6 +135,10 @@ a.skip-main:active {
   text-align: center;
   font-size: 1.2em;
   z-index: 9999;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 /* ====================== Navigation ====================== */
@@ -312,7 +316,7 @@ nav h1 a {
   min-width: 100%;
 }
 
-#restaurants-list li h1 {
+#restaurants-list li h2 {
   color: #d35400;
   font-family: Arial, sans-serif;
   font-weight: 200;
