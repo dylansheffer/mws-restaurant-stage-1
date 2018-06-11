@@ -25,6 +25,8 @@ self.addEventListener('install', function (event) {
   );
 });
 
+// Code based on the wittr code (https://github.com/jakearchibald/wittr) by Jake Archibald
+
 self.addEventListener('activate', function (event) {
   event.waitUntil(
     caches.keys().then(function (staticCacheNames) {
@@ -39,6 +41,8 @@ self.addEventListener('activate', function (event) {
     })
   );
 });
+
+// Code based on example from MDN (https://developer.mozilla.org/en-US/docs/Web/API/Cache/put)
 
 self.addEventListener('fetch', function (event) {
   event.respondWith(
