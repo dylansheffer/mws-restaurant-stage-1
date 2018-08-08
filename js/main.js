@@ -147,11 +147,13 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  * Create restaurant HTML.
  */
 createRestaurantHTML = (restaurant) => {
+  // TODO: Figure out why restaurant is undefined here
+
   const li = document.createElement('li');
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
-  image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.src = DBHelper.imageUrlForRestaurant(`/img/${restaurant.photograph}.jpg`);
   image.alt = restaurant.altText;
   li.append(image);
 
